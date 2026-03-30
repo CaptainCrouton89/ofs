@@ -1,0 +1,234 @@
+tool	key	action	context	source
+karabiner	fn	Double-tap fn to cmd+opt+t	global	/Users/silasrhyneer/.config/karabiner/karabiner.json
+karabiner	fn	Double-tap fn to cmd+opt+t	global	/Users/silasrhyneer/.config/karabiner/karabiner.json
+karabiner	f4	Show Desktop with F4	global	/Users/silasrhyneer/.config/karabiner/karabiner.json
+karabiner	cmd+h	Mac OSX: disable cmd + h to prevent minimising an application window	global	/Users/silasrhyneer/.config/karabiner/karabiner.json
+karabiner	opt+shift+cmd+f12	Saves you from having to reset the computer if e.g. a program has captured the screen and hangs. It does so by sending the SIGKILL signal to the frontmost application. Note: Macos already has a similar keybinding: Press Shift+Option+Cmd+Esc for three seconds. However the built-in keybinding only sends SIGTERM, which doesn't always work, for instance if the program has a signal handler or runs in a debugger.	global	/Users/silasrhyneer/.config/karabiner/karabiner.json
+karabiner	k+l	Home row chords: jk -> escape, kl -> ctrl-c	global	/Users/silasrhyneer/.config/karabiner/karabiner.json
+karabiner	j+k	Home row chords: jk -> escape, kl -> ctrl-c	global	/Users/silasrhyneer/.config/karabiner/karabiner.json
+karabiner	cmd+h	Change right_command+hjkl to arrow keys	global	/Users/silasrhyneer/.config/karabiner/karabiner.json
+karabiner	cmd+j	Change right_command+hjkl to arrow keys	global	/Users/silasrhyneer/.config/karabiner/karabiner.json
+karabiner	cmd+k	Change right_command+hjkl to arrow keys	global	/Users/silasrhyneer/.config/karabiner/karabiner.json
+karabiner	cmd+l	Change right_command+hjkl to arrow keys	global	/Users/silasrhyneer/.config/karabiner/karabiner.json
+karabiner	caps_lock		global	/Users/silasrhyneer/.config/karabiner/karabiner.json
+tmux	ctrl+h	Pane navigation	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+l	select-pane -t :.+	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+p	Window navigation	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+n	next-window	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	p	Move windows	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	n	swap-window -t +1\; select-window -t +1	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	mousedown1pane	select-pane -t=	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	"'""'"	Split panes in current directory (auto re-tile horizontally)	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	%	"split-window -h -c ""#{pane_current_path}"" \; select-layout even-horizontal"	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	r	Reload config	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	x	Kill pane without confirmation (auto re-tile horizontally)	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	n	New window in current path	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	w	Worktree + claude popup	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	w	Create multi-repo workspace (prefix + w)	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+f	File picker popup (Ctrl+f)	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	e	Reopen last file (prefix + e)	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+g	Lazygit popup (Ctrl+g)	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	g	Open file from clipboard (prefix + g)	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	opt+bspace	Command+Backspace to delete entire line (sends Ctrl+U)	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	=	Even vertical columns	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	h	Move pane to adjacent window	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	l	join-pane -t :+1 \; select-layout even-horizontal \; select-layout -t :+1 even-horizontal	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	>	Swap panes	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	<	swap-pane -U	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	h	Resize panes	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	j	resize-pane -D 5	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	k	resize-pane -U 5	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	l	resize-pane -R 5	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	m	Dynamically rebinds C-h/C-l/mouse so no shell runs when focus is off	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	opt+s	Cycle through sisyphus sessions for the same project dir (Alt+s)	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	b	Reset pane border overrides (prefix + B)	prefix	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	v	send -X begin-selection	copy-mode-vi	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	y	send -X copy-selection-and-cancel	copy-mode-vi	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	g	send -X bottom-line \; send -X copy-selection-and-cancel	copy-mode-vi	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+u	send -X -N 10 scroll-up	copy-mode-vi	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+d	send -X -N 10 scroll-down	copy-mode-vi	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+u	Enter copy mode and scroll with Ctrl+U/D (-e exits at bottom)	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+d	copy-mode -e \; send -X -N 10 scroll-down	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+k	Scroll with Ctrl+K/J (-e exits at bottom)	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+j	copy-mode -e \; send -X scroll-down	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+k	send -X scroll-up	copy-mode-vi	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+j	send -X scroll-down	copy-mode-vi	/Users/silasrhyneer/.config/tmux/tmux.conf
+tmux	ctrl+_	Fuzzback (Ctrl+/) - manual binding	root	/Users/silasrhyneer/.config/tmux/tmux.conf
+neovim	esc><esc	Exit terminal mode	terminal	lua/config/keymaps.lua
+neovim	space	Disable leader in terminal	terminal	lua/config/keymaps.lua
+neovim	ctrl+h	Go to left window	terminal	lua/config/keymaps.lua
+neovim	ctrl+l	Go to right window	terminal	lua/config/keymaps.lua
+neovim	<space>r	Reload config	normal	lua/config/keymaps.lua
+neovim	ctrl+s	Save file	normal	lua/config/keymaps.lua
+neovim	ctrl+s	Save file	insert	lua/config/keymaps.lua
+neovim	ctrl+d	Scroll down centered	normal	lua/config/keymaps.lua
+neovim	ctrl+u	Scroll up centered	normal	lua/config/keymaps.lua
+neovim	j	Fast scroll down	normal	lua/config/keymaps.lua
+neovim	k	Fast scroll up	normal	lua/config/keymaps.lua
+neovim	j	Fast scroll down	visual	lua/config/keymaps.lua
+neovim	k	Fast scroll up	visual	lua/config/keymaps.lua
+neovim	k	Fast scroll up	normal	lua/config/keymaps.lua
+neovim	n	Next search centered	normal	lua/config/keymaps.lua
+neovim	n	Prev search centered	normal	lua/config/keymaps.lua
+neovim	<space>e	Explorer	normal	lua/plugins/explorer.lua
+neovim	<space>e	Explorer	terminal	lua/plugins/explorer.lua
+neovim	<space>e	Explorer	normal	lua/plugins/explorer.lua
+neovim	<space>e	Explorer	terminal	lua/plugins/explorer.lua
+neovim	kdheepak/lazygit.nvim	LazyGit	normal	lua/plugins/git.lua
+neovim	<space>gf	File History	normal	lua/plugins/git.lua
+neovim	<space>gtb	Toggle Line Blame	normal	lua/plugins/git.lua
+neovim	<space>gtd	Toggle Deleted	normal	lua/plugins/git.lua
+neovim	<space>gd	Diff vs HEAD~1	normal	lua/plugins/git.lua
+neovim	<space>gb	Set diff base branch	normal	lua/plugins/git.lua
+neovim	<space>gh	File History	normal	lua/plugins/git.lua
+neovim	<space>gh	Branch History	normal	lua/plugins/git.lua
+neovim	<space>gc	Close Diffview	normal	lua/plugins/git.lua
+neovim	ctrl+\\	Toggle Terminal	normal	lua/plugins/terminal.lua
+neovim	ctrl+\\	Toggle Terminal	terminal	lua/plugins/terminal.lua
+neovim	<space>co	Organize Imports	normal	lua/plugins/example.lua
+neovim	<space>cr	Rename File	normal	lua/plugins/example.lua
+neovim	neovim/nvim-lspconfig	Organize Imports	normal	lua/plugins/example.lua
+zed	cmd+backspace	terminal::SendText 	Terminal	/Users/silasrhyneer/.config/zed/keymap.json
+zed	opt+u	terminal::SendKeystroke ctrl-u	Terminal	/Users/silasrhyneer/.config/zed/keymap.json
+zed	opt+d	terminal::SendKeystroke ctrl-d	Terminal	/Users/silasrhyneer/.config/zed/keymap.json
+zed	ctrl+g	None	global	/Users/silasrhyneer/.config/zed/keymap.json
+zed	cmd+g	git_panel::ToggleFocus	global	/Users/silasrhyneer/.config/zed/keymap.json
+zed	shift+cmd+g	git::Branch	global	/Users/silasrhyneer/.config/zed/keymap.json
+zed	cmd+e	project_panel::ToggleFocus	global	/Users/silasrhyneer/.config/zed/keymap.json
+zed	cmd+s	workspace::ToggleLeftDock	global	/Users/silasrhyneer/.config/zed/keymap.json
+zed	opt+shift+y	workspace::ActivatePaneLeft	global	/Users/silasrhyneer/.config/zed/keymap.json
+zed	opt+shift+u	workspace::ActivatePaneRight	global	/Users/silasrhyneer/.config/zed/keymap.json
+zed	opt+u	pane::ActivatePreviousItem	global	/Users/silasrhyneer/.config/zed/keymap.json
+zed	opt+o	pane::ActivateNextItem	global	/Users/silasrhyneer/.config/zed/keymap.json
+zed	ctrl+shift+cmd+g	task::Spawn {'task_name': 'klaude-git'}	global	/Users/silasrhyneer/.config/zed/keymap.json
+zed	ctrl+shift+cmd+p	task::Spawn {'task_name': 'git-publish'}	global	/Users/silasrhyneer/.config/zed/keymap.json
+zed	cmd+d	None	global	/Users/silasrhyneer/.config/zed/keymap.json
+zed	cmd+t	task::Spawn {'task_name': 'tmux: pick session'}	global	/Users/silasrhyneer/.config/zed/keymap.json
+btt	hyper+d		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+o		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+v		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+t		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+i		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+c		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+g		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+m		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+n		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+p		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+w		global	btt_data_store.version_6_286_build_2026031912
+btt	shift+cmd+g		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+cmd+i		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+cmd+h		global	btt_data_store.version_6_286_build_2026031912
+btt	opt+cmd+c		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+6		global	btt_data_store.version_6_286_build_2026031912
+btt	fn+2		global	btt_data_store.version_6_286_build_2026031912
+btt	fn+1		global	btt_data_store.version_6_286_build_2026031912
+btt	fn+1		global	btt_data_store.version_6_286_build_2026031912
+btt	fn+1		global	btt_data_store.version_6_286_build_2026031912
+btt	fn+1		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+z		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+9		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+cmd+l		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+cmd+h		global	btt_data_store.version_6_286_build_2026031912
+btt	;		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+m		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+j		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+k		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+cmd+l		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+cmd+h		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+2		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+delete		global	btt_data_store.version_6_286_build_2026031912
+btt	escape		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+h		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+j		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+k		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+l		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+5		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+2		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+1		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+o		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+3		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+4		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+5		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+6		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+shift+cmd+5		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+1		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+z		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+j		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+delete		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+7		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+8		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+shift+cmd+6		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+cmd+6		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+cmd+7		global	btt_data_store.version_6_286_build_2026031912
+btt	fn+f13		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+[		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+]		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+-		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+=		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+j		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+c		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+k		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+j		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+c		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+k		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+u		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+d		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+g		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+w		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+shift+g		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+k		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+k		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+i		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+7		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+8		global	btt_data_store.version_6_286_build_2026031912
+btt	space		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+cmd+0		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+shift+cmd+4		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+z		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+p		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+k		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+x		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+j		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+k		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+g		global	btt_data_store.version_6_286_build_2026031912
+btt	d		global	btt_data_store.version_6_286_build_2026031912
+btt	delete		global	btt_data_store.version_6_286_build_2026031912
+btt	delete		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+h		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+;		global	btt_data_store.version_6_286_build_2026031912
+btt	shift+cmd+h		global	btt_data_store.version_6_286_build_2026031912
+btt	shift+cmd+;		global	btt_data_store.version_6_286_build_2026031912
+btt	s		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+v		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+k		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+j		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+shift+cmd+8		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+shift+cmd+7		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+4		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+3		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+cmd+8		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+cmd+9		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+cmd+9		global	btt_data_store.version_6_286_build_2026031912
+btt	return		global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+shift+cmd+0		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+h		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+l		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+d		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+s		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+g		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+m		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+`		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+r		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+'		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+,		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+e		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+p		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+y		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+t		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+o		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+i		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+c		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+\		global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+b		global	btt_data_store.version_6_286_build_2026031912
+homerow	hyper+f	Homerow Labels	global	com.superultra.Homerow.plist
+homerow	hyper+j	Homerow Scroll	global	com.superultra.Homerow.plist
