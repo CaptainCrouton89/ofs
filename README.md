@@ -1,18 +1,33 @@
-# ofs
+# ofs — Optimized for Speed
 
-Keybindings are scattered across Karabiner, tmux, neovim, Zed, BetterTouchTool, Homerow, and Raycast. `ofs` extracts them all into a single searchable file.
+A collection of hacky, opinionated tricks for getting faster on a Mac. Hyper key combos, home row chords, pane navigation without thinking, leader sequences committed to muscle memory — the kind of stuff that makes you unreasonably fast once it's wired in.
 
-Python 3, stdlib only, zero dependencies.
+The problem is that these bindings live across 7 different tools, each with its own config format, notation, and storage mechanism. You forget what's bound where. You accidentally shadow a binding. You want to find a free hyper key slot and have to check six places.
 
-## Usage
+`ofs` fixes that. One command, one file, every keybinding you have.
+
+## The stack
+
+| Tool | What it does | Config format |
+|---|---|---|
+| **Karabiner-Elements** | Key remapping, hyper key, simultaneous keys, home row chords | JSON |
+| **BetterTouchTool** | Hyper key → app launch, window management, custom triggers | SQLite |
+| **tmux** | Pane/window/session navigation, copy mode | Text (bind directives) |
+| **neovim** | Editor keymaps, leader sequences, plugin shortcuts | Lua |
+| **Zed** | Editor keymaps | JSONC |
+| **Homerow** | Keyboard-driven clicking, scrolling | plist |
+| **Raycast** | Launcher shortcuts | Manual (GUI-only) |
+
+## What ofs does
+
+Extracts keybindings from all of the above, normalizes the notation (every tool writes modifiers differently), and dumps them into a single searchable file.
 
 ```
 ./ofs build                        # Extract all → bindings.tsv
 ./ofs build --format json|md|tsv   # Choose output format
 ./ofs build --only tmux,neovim     # Subset of sources
-./ofs build -o custom.tsv          # Custom output path
-./ofs list-sources                 # Show configured sources + paths
 ./ofs search <pattern>             # Regex search through last build
+./ofs list-sources                 # Show configured sources + paths
 ```
 
 Example output:
@@ -26,9 +41,19 @@ btt         hyper+d          Send Keyboard Shortcut   global    btt_data_store..
 homerow     hyper+f          Homerow Labels           global    com.superultra...
 ```
 
-## Configuration
+All modifiers normalize to `ctrl`, `opt`, `shift`, `cmd`, `fn`. When all four of ctrl+opt+shift+cmd are present, they collapse to `hyper`.
 
-**`ofs.defaults.json`** ships with default paths for all sources. To override locally, create **`ofs.config.json`** (gitignored) — it shallow-merges per source key:
+## Setup
+
+Python 3, stdlib only, zero dependencies. Clone and run.
+
+```bash
+git clone https://github.com/CaptainCrouton89/ofs.git
+cd ofs
+./ofs build
+```
+
+Default source paths are in `ofs.defaults.json`. To override locally, create `ofs.config.json` (gitignored):
 
 ```json
 {
@@ -38,22 +63,3 @@ homerow     hyper+f          Homerow Labels           global    com.superultra..
   }
 }
 ```
-
-## Adding a source
-
-1. Create `extractors/foo.py` with `extract(config: dict) -> list[Keybinding]`
-2. Add `"foo": "extractors.foo"` to the `EXTRACTORS` dict in `ofs`
-3. Add default config to `ofs.defaults.json`
-
-## How it works
-
-Each extractor reads its tool's config format (JSON, plist, SQLite, regex on text) and returns a list of `Keybinding` objects. All key combos are normalized to a canonical form: modifiers sorted as `ctrl+opt+shift+cmd+fn`, with `ctrl+opt+shift+cmd` collapsed to `hyper`.
-
-| Source | Raw notation | Normalized |
-|---|---|---|
-| Karabiner | `left_command` + `left_shift` + `g` | `shift+cmd+g` |
-| tmux | `C-h` | `ctrl+h` |
-| neovim | `<C-d>` | `ctrl+d` |
-| Zed | `cmd-shift-g` | `shift+cmd+g` |
-| BTT | keycode `2` + bitmask `1966080` | `hyper+d` |
-| Homerow | `⌃⌥⇧⌘F` | `hyper+f` |
