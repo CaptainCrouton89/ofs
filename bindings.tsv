@@ -104,131 +104,66 @@ zed	ctrl+shift+cmd+g	task::Spawn {'task_name': 'klaude-git'}	global	/Users/silas
 zed	ctrl+shift+cmd+p	task::Spawn {'task_name': 'git-publish'}	global	/Users/silasrhyneer/.config/zed/keymap.json
 zed	cmd+d	None	global	/Users/silasrhyneer/.config/zed/keymap.json
 zed	cmd+t	task::Spawn {'task_name': 'tmux: pick session'}	global	/Users/silasrhyneer/.config/zed/keymap.json
-btt	hyper+d		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+o		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+v		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+t		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+i		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+c		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+g		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+m		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+n		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+p		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+w		global	btt_data_store.version_6_286_build_2026031912
-btt	shift+cmd+g		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+cmd+i		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+cmd+h		global	btt_data_store.version_6_286_build_2026031912
-btt	opt+cmd+c		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+shift+6		global	btt_data_store.version_6_286_build_2026031912
-btt	fn+2		global	btt_data_store.version_6_286_build_2026031912
-btt	fn+1		global	btt_data_store.version_6_286_build_2026031912
-btt	fn+1		global	btt_data_store.version_6_286_build_2026031912
-btt	fn+1		global	btt_data_store.version_6_286_build_2026031912
-btt	fn+1		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+z		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+shift+9		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+cmd+l		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+cmd+h		global	btt_data_store.version_6_286_build_2026031912
-btt	;		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+m		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+j		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+k		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+cmd+l		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+cmd+h		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+shift+2		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+delete		global	btt_data_store.version_6_286_build_2026031912
-btt	escape		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+h		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+j		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+k		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+l		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+shift+5		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+2		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+1		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+o		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+3		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+4		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+5		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+6		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+shift+cmd+5		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+shift+1		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+z		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+j		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+delete		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+7		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+8		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+shift+cmd+6		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+cmd+6		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+cmd+7		global	btt_data_store.version_6_286_build_2026031912
-btt	fn+f13		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+[		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+]		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+-		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+=		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+j		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+c		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+k		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+j		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+c		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+k		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+u		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+d		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+g		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+w		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+shift+g		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+k		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+k		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+i		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+shift+7		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+shift+8		global	btt_data_store.version_6_286_build_2026031912
-btt	space		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+cmd+0		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+shift+cmd+4		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+z		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+p		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+k		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+x		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+j		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+k		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+g		global	btt_data_store.version_6_286_build_2026031912
-btt	d		global	btt_data_store.version_6_286_build_2026031912
-btt	delete		global	btt_data_store.version_6_286_build_2026031912
-btt	delete		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+h		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+;		global	btt_data_store.version_6_286_build_2026031912
-btt	shift+cmd+h		global	btt_data_store.version_6_286_build_2026031912
-btt	shift+cmd+;		global	btt_data_store.version_6_286_build_2026031912
-btt	s		global	btt_data_store.version_6_286_build_2026031912
-btt	cmd+v		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+k		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+j		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+shift+cmd+8		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+shift+cmd+7		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+shift+4		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+shift+3		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+cmd+8		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+cmd+9		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+opt+cmd+9		global	btt_data_store.version_6_286_build_2026031912
-btt	return		global	btt_data_store.version_6_286_build_2026031912
-btt	ctrl+shift+cmd+0		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+h		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+l		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+d		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+s		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+g		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+m		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+`		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+r		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+'		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+,		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+e		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+p		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+y		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+t		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+o		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+i		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+c		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+\		global	btt_data_store.version_6_286_build_2026031912
-btt	hyper+b		global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+g	ChatGPT (custom)	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+p	Open Menu Item	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+w	Open URL / Web	global	btt_data_store.version_6_286_build_2026031912
+btt	shift+cmd+g	Menu: Chat GPT	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+cmd+i	ChatGPT Menu	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+cmd+h	ChatGPT	global	btt_data_store.version_6_286_build_2026031912
+btt	opt+cmd+c	ChatGPT (gpt-4o-mini)	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+6	Move to Space	global	btt_data_store.version_6_286_build_2026031912
+btt	fn+2	Send Keyboard Shortcut (sequence)	global	btt_data_store.version_6_286_build_2026031912
+btt	fn+1	Send Keyboard Shortcut	global	btt_data_store.version_6_286_build_2026031912
+btt	fn+1	Send Keyboard Shortcut	global	btt_data_store.version_6_286_build_2026031912
+btt	fn+1	Send Keyboard Shortcut	global	btt_data_store.version_6_286_build_2026031912
+btt	fn+1	Send Keyboard Shortcut	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+9	Move Window to Space	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+cmd+l	Move Window Right	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+cmd+h	Move Window Left	global	btt_data_store.version_6_286_build_2026031912
+btt	;	Toggle App	global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+m	Toggle App	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+j	Send Keyboard Shortcut	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+k	Send Keyboard Shortcut (sequence)	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+cmd+l	Move Window Right	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+cmd+h	Move Window Left	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+2	Paste Text	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+2	Open URL	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+1	Open App	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+o	Open App	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+3	Move Window Left Half	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+4	Move Window Top Half	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+5	Move Window Right Half	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+6	Move Window Bottom Half	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+shift+cmd+5	Open URL	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+shift+cmd+5	Trigger Menubar Menu	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+j	Go to Space 1	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+7	Open File	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+8	Open App / Launch	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+cmd+6	Open App	global	btt_data_store.version_6_286_build_2026031912
+btt	fn+f13	Open App / Launch	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+[	Move Mouse	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+]	Keyboard Shortcut	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+-	Resize Window: Shrink	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+=	Resize Window: Shrink	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+j	Conditional Activation	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+k	Conditional Activation	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+u	Conditional Activation	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+d	Conditional Activation	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+g	Conditional Activation	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+shift+g	Conditional Activation	global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+k	Conditional Activation	global	btt_data_store.version_6_286_build_2026031912
+btt	cmd+i	Conditional Activation	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+7	Conditional Activation	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+shift+8	Conditional Activation	global	btt_data_store.version_6_286_build_2026031912
+btt	space	Paste Custom Text	global	btt_data_store.version_6_286_build_2026031912
+btt	ctrl+opt+cmd+0	Run AppleScript	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+x	Move Mouse to Position	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+h	Move to Space	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+l	Move Window to Space	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+d	Run AppleScript	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+s	Paste Text	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+`	Open App / Launch	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+t	Open URL	global	btt_data_store.version_6_286_build_2026031912
+btt	hyper+t	Trigger Menubar Menu	global	btt_data_store.version_6_286_build_2026031912
 homerow	hyper+f	Homerow Labels	global	com.superultra.Homerow.plist
 homerow	hyper+j	Homerow Scroll	global	com.superultra.Homerow.plist
