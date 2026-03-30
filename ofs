@@ -1,0 +1,156 @@
+#!/usr/bin/env python3
+"""ofs — Optimized for Speed: unified keybinding extractor."""
+
+import argparse
+import json
+import re
+import sys
+from pathlib import Path
+
+# Ensure the project root is on sys.path so lib/ and extractors/ are importable.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from lib.keymap import Keybinding
+from lib.output import format_output
+
+EXTRACTORS = {
+    "karabiner": "extractors.karabiner",
+    "tmux": "extractors.tmux",
+    "neovim": "extractors.neovim",
+    "zed": "extractors.zed",
+    "btt": "extractors.btt",
+    "homerow": "extractors.homerow",
+    "raycast": "extractors.raycast",
+}
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+DEFAULTS_PATH = PROJECT_ROOT / "ofs.defaults.json"
+OVERRIDES_PATH = PROJECT_ROOT / "ofs.config.json"
+
+
+def load_config() -> dict:
+    with DEFAULTS_PATH.open() as f:
+        config = json.load(f)
+
+    if OVERRIDES_PATH.exists():
+        with OVERRIDES_PATH.open() as f:
+            overrides = json.load(f)
+        # Shallow merge per source key
+        for source_name, source_overrides in overrides.get("sources", {}).items():
+            if source_name in config["sources"]:
+                config["sources"][source_name].update(source_overrides)
+            else:
+                config["sources"][source_name] = source_overrides
+        # Merge top-level output settings
+        if "output" in overrides:
+            config["output"].update(overrides["output"])
+
+    return config
+
+
+def cmd_build(args, config):
+    import importlib
+
+    sources = config["sources"]
+
+    # Filter to --only sources if specified
+    if args.only:
+        only = {s.strip() for s in args.only.split(",")}
+        sources = {k: v for k, v in sources.items() if k in only}
+
+    all_bindings: list[Keybinding] = []
+
+    for name, source_config in sources.items():
+        if not source_config.get("enabled", True):
+            continue
+        if name not in EXTRACTORS:
+            print(f"Warning: unknown source {name!r}, skipping", file=sys.stderr)
+            continue
+
+        mod = importlib.import_module(EXTRACTORS[name])
+        try:
+            bindings = mod.extract(source_config)
+            all_bindings.extend(bindings)
+            print(f"  {name}: {len(bindings)} bindings", file=sys.stderr)
+        except Exception as e:
+            print(f"  {name}: ERROR — {e}", file=sys.stderr)
+
+    fmt = args.format or config["output"].get("format", "tsv")
+    output_file = args.output or config["output"].get("file", "bindings.tsv")
+
+    output = format_output(all_bindings, fmt)
+
+    out_path = PROJECT_ROOT / output_file
+    out_path.write_text(output)
+    print(f"\n{len(all_bindings)} bindings → {out_path}", file=sys.stderr)
+
+
+def cmd_list_sources(args, config):
+    for name, source_config in config["sources"].items():
+        enabled = source_config.get("enabled", True)
+        status = "enabled" if enabled else "disabled"
+
+        if "path" in source_config:
+            location = str(Path(source_config["path"]).expanduser())
+        elif "paths" in source_config:
+            location = ", ".join(str(Path(p).expanduser()) for p in source_config["paths"])
+        elif "plist_domain" in source_config:
+            location = f"plist: {source_config['plist_domain']}"
+        elif "manual_bindings" in source_config:
+            count = len(source_config["manual_bindings"])
+            location = f"{count} manual entries"
+        else:
+            location = "?"
+
+        print(f"  {name:12s} [{status:8s}]  {location}")
+
+
+def cmd_search(args, config):
+    output_file = config["output"].get("file", "bindings.tsv")
+    out_path = PROJECT_ROOT / output_file
+
+    if not out_path.exists():
+        print(f"No build output found at {out_path}. Run 'ofs build' first.", file=sys.stderr)
+        sys.exit(1)
+
+    pattern = re.compile(args.pattern, re.IGNORECASE)
+    for line in out_path.read_text().splitlines():
+        if pattern.search(line):
+            print(line)
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        prog="ofs",
+        description="Unified keybinding extractor",
+    )
+    sub = parser.add_subparsers(dest="command")
+
+    build_p = sub.add_parser("build", help="Extract keybindings from all sources")
+    build_p.add_argument("--format", choices=["tsv", "json", "md"], default=None)
+    build_p.add_argument("--only", default=None, help="Comma-separated source names")
+    build_p.add_argument("-o", "--output", default=None, help="Output file path")
+
+    sub.add_parser("list-sources", help="Show configured sources")
+
+    search_p = sub.add_parser("search", help="Search last build output")
+    search_p.add_argument("pattern", help="Regex pattern to search for")
+
+    args = parser.parse_args()
+
+    if not args.command:
+        parser.print_help()
+        sys.exit(1)
+
+    config = load_config()
+
+    if args.command == "build":
+        cmd_build(args, config)
+    elif args.command == "list-sources":
+        cmd_list_sources(args, config)
+    elif args.command == "search":
+        cmd_search(args, config)
+
+
+if __name__ == "__main__":
+    main()

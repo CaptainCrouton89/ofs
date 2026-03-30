@@ -1,0 +1,12 @@
+{
+  "sources": {
+    "karabiner": { "enabled": true, "path": "~/.config/karabiner/karabiner.json" },
+    "tmux": { "enabled": true, "path": "~/.config/tmux/tmux.conf" },
+    "neovim": { "enabled": true, "paths": ["~/.config/nvim/lua/config/keymaps.lua", "~/.config/nvim/lua/plugins/*.lua"] },
+    "zed": { "enabled": true, "path": "~/.config/zed/keymap.json" },
+    "btt": { "enabled": true, "path": "~/Library/Application Support/BetterTouchTool/", "db_pattern": "btt_data_store.version_*" },
+    "homerow": { "enabled": true, "plist_domain": "com.superultra.Homerow" },
+    "raycast": { "enabled": true, "manual_bindings": [] }
+  },
+  "output": { "format": "tsv", "file": "bindings.tsv" }
+}
